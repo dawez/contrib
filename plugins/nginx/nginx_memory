@@ -71,6 +71,16 @@ MIT
 
 =cut
 
+## Munin autoconf method.
+if (exists $ARGV[0] and $ARGV[0] eq "autoconf" ) {
+  if ($ret) {
+    print "no ($ret)\n";
+    exit 1;
+  } 
+  print "yes\n";
+  exit 0;
+}
+
 ## Munin config method.
 if (exists $ARGV[0] and $ARGV[0] eq "config") {
   print "graph_title nginx RAM usage\n";
